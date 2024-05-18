@@ -48,6 +48,8 @@ pipeline{
             steps{
                 script{
                    withDockerRegistry(credentialsId: 'docker', toolName: 'docker'){
+                       sh "docker stop reddit "
+                       sh "docker rm reddit "
                        sh "docker build -t reddit ."
                        sh "docker tag reddit sumand123/reddit:mrigendra "
                        sh "docker push sumand123/reddit:mrigendra "
