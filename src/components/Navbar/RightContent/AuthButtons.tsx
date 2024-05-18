@@ -19,7 +19,7 @@ const AuthButtons: React.FC<AuthButtonsProps> = () => {
         mr={2}
         onClick={() => setAuthModalState({ open: true, view: "login" })}
       >
-        Log In
+        Bog In
       </Button>
       <Button
         variant="solid"
